@@ -13,7 +13,7 @@ This project aims to classify breast cancer tumors as malignant or benign using 
 
 
 ## 📂 Project Structure
-
+```text
 breast_cancer/
 │
 ├── data/
@@ -28,17 +28,21 @@ breast_cancer/
 │   ├── knn.py                   # Handcrafted K-Nearest Neighbors Classifier
 │   └── utils.py                 # Data loading, preprocessing, and plot helpers
 
-Logistic Regression
+## Logistic Regression
 Optimization: Iterative Gradient Descent (10,000 iterations).
 
 Activation: Sigmoid function mapping outputs between 0 and 1.
 
 Loss Tracking: Monitored step-by-step via Binary Cross-Entropy Cost.
 
-Decision Tree
+## Decision Tree
 Splitting Criterion: Evaluates feature cutoffs based on highest Information Gain.
 
 Leaf Resolution: Custom dictionary-based frequency mapping replacing high-level collection libraries.
-K-Nearest Neighbors (KNN)
+
+## K-Nearest Neighbors (KNN)
 Distance Metric: Vectorized Euclidean distance calculation.
 Classification: Manual majority vote tracking of the K closest neighbors.
+
+
+Evaluation & PerformanceAll models are evaluated using a custom accuracy metric function calculating exact matching ratios over the dataset matrix:$$\text{Accuracy} = \frac{\sum (y_{\text{true}} == y_{\text{pred}})}{N}$$
